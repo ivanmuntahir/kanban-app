@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('status')->default('todo');
+            $table->unsignedInteger('order_column');
             $table->timestamps();
         });
     }
