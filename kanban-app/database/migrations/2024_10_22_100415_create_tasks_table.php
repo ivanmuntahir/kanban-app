@@ -13,15 +13,18 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description');
+            $table->string('status')->default('todo');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('tasks');
-    }
+    // /**
+    //  * Reverse the migrations.
+    //  */
+    // public function down(): void
+    // {
+    //     Schema::dropIfExists('tasks');
+    // }
 };
